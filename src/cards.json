@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "name": "Ant-Man",
+    "image": "../images/antman.png",
+    "occupation": "Fry Cook",
+    "location": "A Pineapple Under the Sea",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "name": "Avengers",
+    "image": "../images/avengers.png",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "name": "Black Panther",
+    "image": "../images/blackpanther.png",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "name": "Captain America",
+    "image": "../images/captainamerica.png",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "name": "Captain Marvel",
+    "image": "../images/captainmarvel.png",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "name": "Deadpool",
+    "image": "../images/deadpool.png",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "name": "Guardians of the galaxy",
+    "image": "../images/guardiansofgalaxy.png",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "name": "Iron Man",
+    "image": "../images/ironman.png",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "name": "Jessic Jones",
+    "image": "../images/jessicajones.png",
+    "occupation": "Adventurer",
+    "location": "California",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "name": "Luke Cage",
+    "image": "../images/lukecage.png",
+    "clicked": false
+  },
+  {
+    "id": 11,
+    "name": "Spiderman",
+    "image": "../images/spiderman.png",
+    "clicked": false
+  },
+  {
+    "id": 12,
+    "name": "Wolverine",
+    "image": "../images/wolverine.png",
+    "clicked": false
+  }
+]

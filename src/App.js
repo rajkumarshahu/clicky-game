@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Card from "./components/Card";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+//import Jumbotron from "./components/Jumbotron";
 import cards from "./cards.json";
 
 class App extends Component {
@@ -9,7 +10,7 @@ class App extends Component {
     cards,
     score: 0,
     highscore: 0,
-    alertMessage:["Your Guess is correct!!!", "Incorrect Guess-- Game Over!!!"]
+    alertMessage:["Your Guess is correct!!!", "Incorrect Guess\n\n Game Over!!!"]
   };
 
 
@@ -51,8 +52,15 @@ class App extends Component {
   // Map over this.state.cards and render a Card component for each card object
   render() {
     return (
-      <Wrapper>
+
+    <Wrapper>
+
         <Title score={this.state.score} highscore={this.state.highscore} message={this.state.message}>Clicky Game</Title>
+        <div>
+        {/* <Jumbotron/> */}
+        </div>
+
+
         {this.state.cards.map(card => (
           <Card
             suffleCard={this.suffleCard}
@@ -62,7 +70,12 @@ class App extends Component {
             image={card.image}
           />
         ))}
+
+
+
       </Wrapper>
+
+
     );
   }
 }

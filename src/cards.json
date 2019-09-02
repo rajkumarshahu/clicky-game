@@ -4,7 +4,6 @@
     "name": "Ant-Man",
     "image": "../images/antman.png",
     "occupation": "Fry Cook",
-    "location": "A Pineapple Under the Sea",
     "clicked": false
   },
   {

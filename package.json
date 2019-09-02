@@ -2,13 +2,13 @@
   "name": "clicky-game",
   "version": "0.1.0",
   "private": true,
+  "home": "https://rajkumarshahu.github.io/clicky-game/",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1"
   },
   "scripts": {
-    "home": "https://rajkumarshahu.github.io/clicky-game/",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

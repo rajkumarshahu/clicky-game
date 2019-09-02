@@ -10,8 +10,25 @@ class App extends Component {
     cards,
     score: 0,
     highscore: 0,
-    alertMessage:["Your Guess is correct!!!", "Incorrect Guess\n\n Game Over!!!"]
+    alertMessage:[
+      "Your Guess is correct!!!",
+      "Incorrect Guess\n\n Game Over!!!"
+    ]
   };
+
+  componentDidMount () {
+    this.gameStart();
+  };
+
+  gameStart = () => {
+    if (this.state.score > this.state.highscore) {
+      this.setState({highscore: 0});
+    }
+    this.state.cards.forEach(card => {
+      card.count = 0;
+    });
+    this.setState({score: 0});
+  }
 
 
   gameOver = ()=>{
@@ -25,17 +42,13 @@ class App extends Component {
     return true;
   }
 
-
   suffleCard = id =>{
-
       this.state.cards.find((card, i) => {
-
         if (card.id === id ) {
-
           if(cards[i].count  === 0 ){
             cards[i].count = cards[i].count + 1;
             this.setState({score : this.state.score + 1}, function(){
-            this.setState({message: this.state.alertMessage[0]})
+              this.setState({message: this.state.alertMessage[0]})
               console.log(this.state.score);
             });
             this.state.cards.sort(() => Math.random() - 0.5)
@@ -70,12 +83,7 @@ class App extends Component {
             image={card.image}
           />
         ))}
-
-
-
       </Wrapper>
-
-
     );
   }
 }

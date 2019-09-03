@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Card from "./components/Card";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-//import Jumbotron from "./components/Jumbotron";
 import cards from "./cards.json";
+import Footer from "./components/Footer";
+
 
 class App extends Component {
   state = {
@@ -12,7 +13,12 @@ class App extends Component {
     highscore: 0,
     alertMessage:[
       "Your Guess is correct!!!",
-      "Incorrect Guess\n\n Game Over!!!"
+      "Incorrect Guess\n\n Game Over!!!",
+      "Click on any character to play again !!!"
+    ],
+    animations:[
+      'animated bounce delay-2s',
+      'animated tada'
     ]
   };
 
@@ -28,8 +34,8 @@ class App extends Component {
       card.count = 0;
     });
     this.setState({score: 0});
-  }
 
+  }
 
   gameOver = ()=>{
     if (this.state.score > this.state.highscore) {
@@ -38,6 +44,7 @@ class App extends Component {
     this.state.cards.forEach(card => {
       card.count = 0;
     });
+    this.setState({animation: this.state.animations[1]})
     this.setState({score: 0});
     return true;
   }
@@ -49,12 +56,22 @@ class App extends Component {
             cards[i].count = cards[i].count + 1;
             this.setState({score : this.state.score + 1}, function(){
               this.setState({message: this.state.alertMessage[0]})
+              this.setState({animation: this.state.animations[0]})
               console.log(this.state.score);
             });
             this.state.cards.sort(() => Math.random() - 0.5)
             return true;
-          } else {
+          }else if(this.state.score === 12){
+            this.setState({highscore: this.state.score});
+              this.setState({message: this.state.alertMessage[2]})
+              this.setState({animation: this.state.animations[0]})
+              console.log(this.state.score);
+
+            this.gameStart();
+          }
+           else {
             this.gameOver();
+
             this.setState({message: this.state.alertMessage[1]})
           }
         }
@@ -67,7 +84,6 @@ class App extends Component {
     return (
 
     <Wrapper>
-
         <Title score={this.state.score} highscore={this.state.highscore} message={this.state.message}>Clicky Game</Title>
         <div>
         {/* <Jumbotron/> */}
@@ -81,11 +97,12 @@ class App extends Component {
             key={card.id}
             name={card.name}
             image={card.image}
+            class={this.state.animation}
           />
         ))}
+        <Footer/>
       </Wrapper>
     );
   }
 }
-
 export default App;

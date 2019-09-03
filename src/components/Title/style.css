@@ -2,17 +2,26 @@
 .header {
   width: 100%;
   font-size: 2rem;
-  color: #2A77AE;
+  color: #ffffff;
   margin-bottom: 10px;
-  background: rgb(166, 185, 199);
-  padding: 30px;
+  background: black;
+  padding-top: 10px;
+  margin-top:0;
 }
 
 .title {
-  margin-bottom: 50px;
+  /* margin: 20px 0 20px 0; */
   float: left;
+  font-family: 'Marvel', sans-serif;
 }
 
 .scores {
-  float: right;
+  /* margin: 20px 0 20px 0; */
+  text-align: left;
+  font-family: 'Rakkas', cursive;
+}
+
+.message {
+  /* margin: 20px 0 20px 0; */
+  font-family: 'Rakkas', cursive;
 }

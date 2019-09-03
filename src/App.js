@@ -14,8 +14,7 @@ class App extends Component {
       "Your Guess is correct!!!",
       "Incorrect Guess. Game Over!!!",
       "Click on any character to play again !!!",
-      "Click on a character to gain points! If you click on the same character twice you will lose!"
-
+      "Click on a character to gain points! If you click on the same character twice you will lose!",
     ],
     animations: ["animated bounce delay-2s", "animated tada"],
   };

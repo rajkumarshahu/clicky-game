@@ -6,7 +6,11 @@ Clicky Game is a memory game with React.
 
 1. The application renders different images of Marvel characters to the screen.
 
+![slide 1](src/screen-shot1.png)
+
 2. The application keeps track of the user's score. The user's score is incremented when clicking an image for the first time. The user's score resets to 0 if they click the same image more than once.
+
+![slide 2](src/screen-shot2.png)
 
 3. Every time an image is clicked, the images rendered to the page shuffles themselves in a random order.
 
@@ -23,7 +27,7 @@ Clicky Game is a memory game with React.
 ## Running app
 
 ```sh
-cd mongo-scraper
+cd clicky-game
 
 npm install (to install dependencies)
 
